@@ -3,10 +3,14 @@
 /* Controllers */
 
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
-
-
-function MyCtrl2() {
+function InputsController($scope, StoryService, InputService) {
+    $scope.InputService = InputService;
 }
-MyCtrl2.$inject = [];
+InputsController.$inject = ['$scope', 'StoryService', 'InputService'];
+
+
+function StoryController($scope, StoryService, InputService) {
+    $scope.StoryService = StoryService;
+    $scope.inputs = InputService.inputs;
+}
+StoryController.$inject = ['$scope', 'StoryService', 'InputService'];

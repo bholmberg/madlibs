@@ -1,0 +1,11 @@
+<p>Choose a story</p>
+
+<ul>
+    <li ng-repeat="story in StoryService.stories" ng-click="StoryService.activeStory = story">{{story.name}}</li>
+</ul>
+
+<!-- only show the container when there is an active story (name property is defined) -->
+<div class="story-container" ng-show="StoryService.activeStory.name" story-render>
+    <h1>{{StoryService.activeStory.name}}</h1>
+    <div compile="StoryService.activeStory.body"></div>
+</div>

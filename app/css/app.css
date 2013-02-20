@@ -28,3 +28,17 @@
   content: "";
   padding: 0;
 }
+
+
+
+
+
+/* madlibs styles */
+
+.story-container {
+    border: 1px solid black;
+    background: #eee;
+    padding:20px;
+}
+
+

@@ -1,0 +1,17 @@
+<div ng-controller="InputsController">
+    <p>Inputs for the story go here:</p>
+
+    {{InputService.inputs|json}}
+
+    <form name="inputs">
+        <input type="text" ng-model="InputService.inputs.adjective" placeholder="Adjective" /><br/>
+        <input type="text" ng-model="InputService.inputs.noun" placeholder="Noun" /><br/>
+        <input type="text" ng-model="InputService.inputs.animal" placeholder="Animal" /><br/>
+        <input type="text" ng-model="InputService.inputs.noise" placeholder="Noise" /><br/>
+        <button>Generate!</button>
+    </form>
+</div>
+
+
+
+
